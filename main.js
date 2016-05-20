@@ -1,6 +1,6 @@
 var seconds = 0;
 var cursors = 0;
-
+var clocks = 0;
 
 function secondsClick(number){
 	seconds = seconds + number;
@@ -19,11 +19,28 @@ function buyCursor(){
 	document.getElementById('cursorCost').innerHTML = nextCost;
 };
 
+function buyClock(){
+	var clockCost = Math.floor(100 * Math.pow(1.1,clocks));
+	if(seconds >= clockCost){
+		clocks = clocks + 1;
+		seconds = seconds - clockCost;
+		document.getElementById('clocks').innerHTML = clocks;
+		document.getElementById('seconds').innerHTML = seconds;
+	};
+	var nextCost = Math.floor(100 * Math.pow(1.1,clocks));
+	document.getElementById('clockCost').innerHTML = nextCost;
+};
+
+
+
+
+
 
 
 
 window.setInterval(function(){
 	
 	secondsClick(cursors);
+	secondsClick(clocks*10);
 
 }, 1000);
