@@ -493,6 +493,7 @@ p.tagline {
 .download-bar .inner {
   overflow: hidden;
   text-align: center;
+  font-size:30px;
 }
 
 .download-bar .watch-fork iframe {
