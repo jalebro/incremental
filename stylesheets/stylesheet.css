@@ -263,6 +263,9 @@ textarea {
 
 button {
   overflow: visible;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  padding: 50px;
 }
 
 /**
